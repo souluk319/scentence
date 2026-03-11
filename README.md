@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SCENTENCE
 
-## Getting Started
+SCENTENCE는 향수를 중심으로 한 웹 서비스입니다. 브랜드 랜딩 페이지를 시작으로 AI 향수 추천, 아카이브형 보관함, 레이어링 기능, 향수 네트워크, 향수 위키 성격의 콘텐츠까지 하나의 제품 흐름 안에 담는 것을 목표로 합니다.
 
-First, run the development server:
+현재는 백엔드와 분리해놓은 상태입니다.
+
+## 주요 기능
+
+- 브랜드 중심의 랜딩 페이지와 모션 연출
+- AI 향수 추천 진입 흐름
+- 향수 아카이브 / 컬렉션 UI
+- 향수 레이어링 기능
+- 향수 네트워크 시각화
+- 향수 위키형 콘텐츠 페이지
+- 로그인, 회원가입, 계정 복구, 카카오 로그인
+- 관리자 페이지 및 관련 UI 컴포넌트
+
+## 기술 스택
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- NextAuth
+- Three.js / React Three Fiber
+- Vis Network
+
+## 로컬 실행 방법
+
+### 1. 의존성 설치
+
+```bash
+npm install
+```
+
+### 2. 환경 변수 설정
+
+실행 전에 로컬 환경 변수 파일을 준비해야 합니다.
+
+```bash
+.env
+```
+
+민감한 환경 변수는 절대 Git에 커밋하지 않습니다.
+
+### 3. 개발 서버 실행
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 `http://localhost:3000`으로 접속합니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 사용 가능한 스크립트
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+```
 
-## Learn More
+## 프로젝트 구조
 
-To learn more about Next.js, take a look at the following resources:
+```text
+app/              App Router 페이지 및 라우트
+components/       재사용 가능한 UI / 기능 컴포넌트
+contexts/         React Context 상태 관리
+lib/              유틸 함수
+public/           정적 에셋
+types/            타입 선언
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 참고 사항
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `.next/`, `node_modules/`, `.claude/`, `.env*`, `.DS_Store` 같은 로컬 전용 파일은 Git에 올리지 않습니다.
+- 기능별 진행 메모와 복구용 작업 기록은 `PROJECT_NOTES.md`에 따로 정리합니다.
 
-## Deploy on Vercel
+## 현재 상태
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+프로젝트 구조와 Git 상태를 정리하는 작업이 진행 중입니다. 나중에 작업을 이어서 할 경우에는 `README.md`보다 먼저 `PROJECT_NOTES.md`를 확인하는 편이 빠릅니다.
